@@ -40,6 +40,7 @@ export async function injectElements(lesEtapes, laListe) {
  * @param {string} tagName
  * @return {HTMLElement}
  */
+
 export function renewTag(tagName) {
     const laListe = document.querySelector(tagName)
     if (laListe !== null) {
