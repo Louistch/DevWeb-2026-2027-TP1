@@ -11,6 +11,10 @@ const wrapper = document.querySelector('#controle')
 }
 */
 
+function CalculEtape2(){
+    const nombreDeTasses = document.querySelector('#saisie').value * 1
+}
+
 function start() {
 
     const etapes = [
