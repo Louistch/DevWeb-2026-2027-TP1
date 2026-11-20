@@ -1,6 +1,15 @@
-import {injectElements, renewTag} from "./functions/dom.js";
+import {createElement, injectElements, renewTag} from "./functions/dom.js";
 
 const wrapper = document.querySelector('#controle')
+
+
+
+/*function etape2() {
+    const labelSaisie:HTMLElement=createElement(tagName'label',attributes:{for:'saisie'});
+    const Saisie:HTMLElement=createElement(tagName'label',attributes:{for:'saisie'});
+
+}
+*/
 
 function start() {
 
