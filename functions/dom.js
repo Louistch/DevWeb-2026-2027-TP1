@@ -49,6 +49,14 @@ export function renewTag(tagName) {
     return createElement(tagName)
 }
 
+export async function injectElements(lesEtapes, laListe) {
+    for (let etape of Object.values(lesEtapes)) {
+        await delay(1000)
+        let liListe = createElement('li')
+        liListe.innerText = etape.title
+        laListe.append(liListe)
+    }
+}
 /**
  * Permet d'ajouter un délai avant un traitement
  * @param {Number} duree en ms
