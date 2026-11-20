@@ -27,10 +27,10 @@ export function createElement(tagName, attributes = {}) {
  * @param {HTMLElement}laListe
  */
 export async function injectElements(lesEtapes, laListe) {
-    for (let value of Object.values(lesEtapes)) {
+    for (let etape of Object.values(lesEtapes)) {
         await delay(1000)
         let liListe = createElement('li')
-        liListe.innerText = value
+        liListe.innerText = etape.title
         laListe.append(liListe)
     }
 }
@@ -40,7 +40,6 @@ export async function injectElements(lesEtapes, laListe) {
  * @param {string} tagName
  * @return {HTMLElement}
  */
-
 export function renewTag(tagName) {
     const laListe = document.querySelector(tagName)
     if (laListe !== null) {
@@ -49,14 +48,6 @@ export function renewTag(tagName) {
     return createElement(tagName)
 }
 
-export async function injectElements(lesEtapes, laListe) {
-    for (let etape of Object.values(lesEtapes)) {
-        await delay(1000)
-        let liListe = createElement('li')
-        liListe.innerText = etape.title
-        laListe.append(liListe)
-    }
-}
 /**
  * Permet d'ajouter un délai avant un traitement
  * @param {Number} duree en ms
