@@ -28,7 +28,7 @@ export function createElement(tagName, attributes = {}) {
  */
 export async function injectElements(lesEtapes, laListe) {
     for (let etape of Object.values(lesEtapes)) {
-        await delay(1000)
+        await delay(etape.duree)
         let liListe = createElement('li')
         liListe.innerText = etape.title
         laListe.append(liListe)
